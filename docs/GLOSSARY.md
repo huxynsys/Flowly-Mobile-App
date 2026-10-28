@@ -1,5 +1,7 @@
 Authority: decisions.md. If this file conflicts with decisions.md, decisions.md wins.
 
+Date: 2026-10-28
+
 # Glossary
 
 - **Task:** A user-owned unit of work with an intended duration and optional deadline; a Task can be placed in a Plan Block and can follow an MVP recurrence pattern.
