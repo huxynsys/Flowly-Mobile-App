@@ -245,7 +245,8 @@ Only unresolved choices are listed here. Locked decisions are not questions. The
 - **Related decisions:** D-009, D-010
 
 ### OQ-030: Confirm the canonical user flow document
-**Status:** Open
+**Answer:** Option A
+**Status:** Answered
 - **Files that depend on it:** `decisions.md`, `app_flow.md`, `flow.md`, `user_flow.md`
 - **Options:** A. Confirm `app_flow.md` as canonical, with `flow.md` and `user_flow.md` superseded. B. Select `flow.md` or `user_flow.md` as canonical instead.
 - **Related decisions:** D-056
