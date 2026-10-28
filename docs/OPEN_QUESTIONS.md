@@ -243,3 +243,15 @@ Only unresolved choices are listed here. Locked decisions are not questions. The
 - **Options:** A. Order scheduled items by start time, then stable ID; put unscheduled Tasks in a separate section ordered by deadline and priority. B. Interleave scheduled and unscheduled items using an explicitly approved deadline and priority ordering.
 
 - **Related decisions:** D-009, D-010
+
+### OQ-030: Confirm the canonical user flow document
+**Status:** Open
+- **Files that depend on it:** `decisions.md`, `app_flow.md`, `flow.md`, `user_flow.md`
+- **Options:** A. Confirm `app_flow.md` as canonical, with `flow.md` and `user_flow.md` superseded. B. Select `flow.md` or `user_flow.md` as canonical instead.
+- **Related decisions:** D-056
+
+### OQ-031: How should the accent color pairing meet WCAG 2.2 AA contrast?
+**Status:** Open
+- **Files that depend on it:** `decisions.md`, `design.md`
+- **Options:** A. Darken the accent until white text reaches 4.5:1. B. Keep the accent and use dark text on it.
+- **Related decisions:** D-057

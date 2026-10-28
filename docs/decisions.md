@@ -1,4 +1,5 @@
 # Flowly Decisions
+Authority: decisions.md. If this file conflicts with decisions.md, decisions.md wins.
 
 Date: 2026-10-28
 
@@ -9,7 +10,7 @@ This document is the highest authority for Flowly product scope and architecture
 ### D-001: MVP boundary
 - **Date:** 2026-10-28
 - **Status:** Accepted
-- **Decision:** The MVP includes email/password authentication, onboarding, scheduling preferences, Tasks, Events, categories, separate Today, Schedule, and Calendar destinations, deterministic daily plan generation, daily plans, Wake Events and replanning, plan version acceptance or keeping the current version, undo of the latest accepted replan by restoring the previous active version, manual Replan My Day, schedule locking, scheduled local notifications, AI daily plan generation and replanning, accessibility baseline, and error and empty states. Anything not included is post-MVP. The explicit post-MVP scope is listed in D-026.
+- **Decision:** The MVP includes email/password authentication for cloud persistence or synchronization, local guest schedules without authentication, onboarding, scheduling preferences, Tasks, Events, categories, separate Today, Schedule, and Calendar destinations, deterministic daily plan generation, daily plans, Wake Events and replanning, plan version acceptance or keeping the current version, undo of the latest accepted replan by restoring the previous active version, manual Replan My Day, schedule locking, scheduled local notifications with multiple user-selectable reminder offsets, AI daily plan generation and replanning, accessibility baseline, and error and empty states. Anything not included is post-MVP. The explicit post-MVP scope is listed in D-026.
 - **Consequences:** Implementation and tickets must distinguish MVP from post-MVP. The explicit AI, monthly recurrence, and OS-level local notification decisions below are part of this MVP boundary. Do not introduce any other feature into MVP without an accepted decision update.
 
 ### D-002: Product identity and platforms
@@ -143,7 +144,7 @@ integration_test/                 # Flutter integration tests
 ### D-019: Notification timing and scope
 - **Date:** 2026-10-28
 - **Status:** Accepted
-- **Decision:** MVP reminders are local notifications derived from the user's saved schedule and reminder preferences, with multiple user-selectable reminder offsets. Quiet hours, remote push, email, and SMS reminders are not MVP features. Offset values are TBD.
+- **Decision:** MVP reminders are local notifications derived from the user's saved schedule and reminder preferences, with multiple user-selectable reminder offsets as defined in D-043. Quiet hours as defined in D-044, remote push, email, and SMS reminders are not MVP features. Offset values are TBD.
 - **Consequences:** Do not add remote notification infrastructure or quiet hours to MVP. Cancel pending reminders when a Task is completed as defined in D-045, and never show a success state for a reminder that the OS did not accept for scheduling.
 
 ## User experience and release
@@ -367,6 +368,18 @@ integration_test/                 # Flutter integration tests
 - **Status:** Accepted
 - **Decision:** Order scheduled items by start time and then stable ID, and show unscheduled Tasks separately ordered by deadline and priority.
 - **Consequences:** Apply this ordering consistently to Today and schedule item lists.
+
+### D-056: Canonical user flow document
+- **Date:** 2026-10-28
+- **Status:** Proposed, awaiting owner confirmation
+- **Decision:** The proposed canonical user flow document is `app_flow.md`.
+- **Consequences:** Other flow documents are superseded by `app_flow.md` if this proposal is confirmed. Owner confirmation is tracked in OQ-030.
+
+### D-057: Accent text contrast
+- **Date:** 2026-10-28
+- **Status:** Open
+- **Decision:** The accent color `#C85BD3` with white text has a contrast ratio of 3.56:1, which fails WCAG 2.2 AA for body text.
+- **Consequences:** Do not treat this color pairing as WCAG 2.2 AA compliant. Resolve the choice in OQ-031; no option is selected here.
 
 ## Values still required
 
